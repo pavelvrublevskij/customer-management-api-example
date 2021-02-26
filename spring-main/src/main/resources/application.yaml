@@ -1,0 +1,41 @@
+spring:
+  profiles:
+    include: invoice
+
+server:
+  port: 8080
+  tomcat:
+    basedir: logs/tomcat
+    accesslog:
+      enabled: true
+      directory: logs
+    # Maximum amount of worker threads in server under top load. In other words, maximum number of simultaneous requests that can be handled.
+    max: 400
+    # Time that connectors wait for another HTTP request before closing the connection. When not set, the connector’s container-specific default is used. Use a value of -1 to indicate infinite timeout.
+    connection-timeout: 5s
+    # The minimum number of threads always kept running. This includes both active and idle threads.
+    min-spare: 10
+    max-swallow-size: 2MB
+    # Maximum size of the HTTP post content.
+    max-http-form-post-size: 2MB
+    # Maximum number of connections that the server accepts and processes at any given time.
+    max-connections: 10000
+    # Maximum queue length for incoming connection requests when all possible request processing threads are in use.
+    accept-count: 100
+  servlet:
+    contextPath: /api
+  max-http-header-size: 8KB
+
+## Logging
+logging:
+  file:
+    path: /log/simexample
+  level:
+    lt:
+      asprogramuoju: TRACE
+    org:
+      springframework: ERROR
+      # if you wan't to see parameters
+      hibernate:
+        type: error
+        stat: off
