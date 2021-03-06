@@ -6,8 +6,6 @@
 * Get data from DB as another retrieval example:
     - Use liquibase
     - Persistence
-   
-* Make example project dockerized
 
 ## Standard 
 TMF678_CustomerBill
@@ -24,37 +22,46 @@ https://projects.tmforum.org/wiki/display/API/Open+API+Table
 * Language JAVA 8
 * Maven (Latest)
 
-## How-To
+## Run Docker image with working demo
+-------------------
+First time to build a container locally:
 
-OpenApi with Lombok
-=======================================
+    docker build -t cbm-api .
 
-## Overview
+after that you always could call:
+
+	docker run -p 8080:8080 cbm-api:latest
+
+
+## Access the application:
+-------------------
+* v2: http://localhost:8080/api/swagger-ui/index.html
+* v3: http://localhost:8080/api/swagger-ui/index.html?url=/api/v3/api-docs&validatorUrl=#
+
+
+----
+# How-To
+
+## OpenApi with Lombok
+
+### Overview
 As I like lombok very much I need it functionality for openapi generator also. I have created a templates to achieve my desires.
 
 This project has template for use of Lombok in generated models.
 They are not enabled by default, but are enabled with "additional-properties"
 
-## Additional Properties
+### Additional Properties
 This template set relies on the additional properties listed in this table
 
 | Name         | Data Type | Description                                |
 |--------------|-----------|--------------------------------------------|
 | useLombok    | Boolean   | Enables Lombok for models                  |
 
-## How generate last template by OpenAPI version (without lombok)
+### How generate last template by OpenAPI version (without lombok)
 Lombok will be supported in the future
 
-```
-npm install @openapitools/openapi-generator-cli -g
+    npm install @openapitools/openapi-generator-cli -g
+    openapi-generator-cli version-manager set 5.0.0
+    npx @openapitools/openapi-generator-cli author template -g spring
 
-openapi-generator-cli version-manager set 5.0.0
-
-npx @openapitools/openapi-generator-cli author template -g spring
-```
 More info at https://openapi-generator.tech/docs/installation
-
-Swagger
-=======================================
-* v2: http://localhost:8080/api/swagger-ui/index.html
-* v3: http://localhost:8080/api/swagger-ui/index.html?url=/api/v3/api-docs&validatorUrl=#

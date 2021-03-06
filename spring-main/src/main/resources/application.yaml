@@ -5,10 +5,10 @@ spring:
 server:
   port: 8080
   tomcat:
-    basedir: logs/tomcat
+    basedir: /var/log/tomcat
     accesslog:
       enabled: true
-      directory: logs
+      directory: log
     # Maximum amount of worker threads in server under top load. In other words, maximum number of simultaneous requests that can be handled.
     max: 400
     # Time that connectors wait for another HTTP request before closing the connection. When not set, the connector’s container-specific default is used. Use a value of -1 to indicate infinite timeout.
@@ -29,7 +29,7 @@ server:
 ## Logging
 logging:
   file:
-    path: /log/simexample
+    path: /var/log/cbm-api
   level:
     lt:
       asprogramuoju: TRACE
