@@ -1,4 +1,5 @@
 # Customer Bill Management API (Example with integrations), v 1.0.0-dev-version
+__OpenAPI generator used (generation possible by lombock)__
 
 ## TODO
 * Build with Gradle (Latest)
@@ -22,7 +23,7 @@ https://projects.tmforum.org/wiki/display/API/Open+API+Table
 * Language JAVA 8
 * Maven (Latest)
 
-## Run Docker image with working demo
+## Run Docker image localy (docker required)
 -------------------
 First time to build a container locally:
 
