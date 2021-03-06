@@ -1,5 +1,5 @@
 # Customer Bill Management API (Example with integrations), v 1.0.0-dev-version
-__OpenAPI generator used (generation possible by lombock)__
+__OpenAPI generator used (lombok supported)__
 
 ## TODO
 * Build with Gradle (Latest)
