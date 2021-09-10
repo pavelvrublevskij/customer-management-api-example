@@ -1,6 +1,8 @@
 spring:
   profiles:
-    include: invoice
+    include:
+      - basic-auth
+      - invoice
 
 server:
   port: 8080

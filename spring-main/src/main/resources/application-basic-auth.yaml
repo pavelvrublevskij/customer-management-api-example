@@ -1,0 +1,8 @@
+global:
+  users:
+    - username: admin
+      password: admin
+      roles: ADMIN
+    - username: customer
+      password: custromer
+      roles: CUSTOMER

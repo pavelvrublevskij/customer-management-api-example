@@ -19,6 +19,7 @@
 
     <modules>
         <module>core</module>
+        <module>security</module>
         <module>openapi</module>
         <module>ws</module>
         <module>api</module>
