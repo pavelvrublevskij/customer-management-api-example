@@ -1,9 +1,3 @@
-spring:
-  profiles:
-    include:
-      - basic-auth
-      - invoice
-
 server:
   port: 8080
   tomcat:

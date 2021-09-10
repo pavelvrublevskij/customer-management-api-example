@@ -8,6 +8,7 @@
         <groupId>lt.asprogramuoju.service.customerbill</groupId>
         <artifactId>base-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>some-ws</artifactId>

@@ -38,8 +38,8 @@ public class BasicAuthConfig extends CommonAuthConfig {
                     .password(user.getPassword())
                     .roles(user.getRoles())
                     .build());
-            log.info("Imported globally users {}", applicationsUsers);
         });
+        log.info("Imported globally users {}", applicationsUsers);
 
         return manager;
     }
